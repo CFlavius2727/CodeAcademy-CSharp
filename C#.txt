@@ -1,0 +1,31 @@
+C# - programming language
+
+Data types - char, string, int, long, float, double, decimal, var(once assigned can't be changed)
+Input and output - Console.WriteLine(text/variable) and Console.ReadLine();
+
+Converting data types - int positiveInt = (int)positiveDouble - this is called casting
+		      - other methods to convert data types are is to use built-in methods like Convert.ToX();
+
+Mathematical operations - use Math.Methods();
+
+Strings - stringVar.Length; stringVar.IndexOf(); stringVar.Substring(start, length); stringVar.ToUpper(); stringVar.ToLower();String.Join("", arrayVar);
+
+Tenary operators - string movement = ( "green" == "green" ) ? "go" : "stop";
+
+Arrays - int[] x; int [] plantHeights = {3, 4, 6}; int[] plantHeights = new int[] {3, 4, 6}; var numbers = new[] {1,2,3}; arrayVar[index];
+Arrays methods - arrayVar.Length; Array.Sort(arrayVar); Array.IndexOf(arrayVar, wordToLookFor/int); Array.Reverse(arrayVar);
+
+Loops - foreach (string note in melody){};
+
+Lists - List<string> listVar = using System.Collections.Generic ;new List<string>(); listVar.Add("");
+Lists methods - listVar.Count; listVar.Contains("string"); listVar.Remove("string"); listVar.Clear(); listVar.AddRange(new string[] {"s1","s2"}); listVar.InsertRange(2, new string[] {"s1","s2"});
+		listVar.RemoveRange(4,2); stringVar.ToCharArray();
+
+Methods - static void methodName (string s, out int number); static void methodName (string s, string s1 = "here"); static void methodName(d: 4, b: 1; a: 2);
+
+Classes constructors - public Forest(string s) : this(s2, "Unknown")
+getter and setter - public int Age{ get {return age;} set { age = value;}};
+Classes - static keyword makes the variable/method/property the same to all instances(they share something in common)
+	- static constructors will run once without created an object or instantioning
+	- static methods can be accessed with creating an object or instantioning
+	- static classes cannot be instantioned similar to Math.Sqrt(); can be accessed at any time like a library
