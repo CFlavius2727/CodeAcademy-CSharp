@@ -1,0 +1,70 @@
+using System;
+
+namespace TrueOrFalse
+{
+  class Program
+  {
+		static void Main(string[] args)
+    {
+      // Do not edit these lines
+      Console.WriteLine("Welcome to 'True or False?'\nPress Enter to begin:");
+      string entry = Console.ReadLine();
+      Tools.SetUpInputStream(entry);
+
+      // Type your code below
+      string[] questions = new string[] {"True or False?","1>2?","10==11"};
+      bool[] answers = new bool[] {true,false,false};
+      bool[] responses = new bool[questions.Length];
+
+      if(questions.Length != answers.Length){
+        Console.WriteLine("WARNING!");
+      }
+      
+      int askingIndex=0;
+      string input="hi";
+      foreach(string q in questions){
+      
+      bool isBool=false;
+      bool inputBool;
+
+        while(isBool==false){
+        Console.WriteLine(q);
+        Console.Write("True or False?: ");
+        input = Console.ReadLine();
+        input = input.ToLower();
+
+        Console.WriteLine(input);
+        if(input=="true" || input=="false"){
+          isBool = true;
+        }else{
+          Console.WriteLine("Please respond with 'true' or 'false'.");
+          isBool = false;
+          }
+        }
+        if(isBool==true){
+          inputBool = true;
+          responses[askingIndex] = Convert.ToBoolean(input);
+          askingIndex++;
+        }else{
+          inputBool = false;
+        }
+      }
+      int scoringIndex=0;
+      int score=0;
+
+      foreach(bool c in answers){
+        if(answers[scoringIndex]==responses[scoringIndex]){
+          score++;
+        }
+        Console.WriteLine($"{scoringIndex+1}. Input: {responses[scoringIndex]} | Answer: {answers[scoringIndex]}");
+
+        scoringIndex++;
+      }
+
+      Console.WriteLine($"You got {score} out of {answers.Length}!");
+
+
+
+    }
+  }
+}
