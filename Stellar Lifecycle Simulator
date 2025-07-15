@@ -1,0 +1,36 @@
+using System;
+
+namespace StarLifecycleSimulator
+{
+  public class Star{
+    public string starName;
+    public string starType;
+    public int age;
+    public double brightness;
+
+    public Star(string starName, string starType){
+      this.age = 0;
+      this.brightness = 1.0;
+    }
+
+    public Star(string starName) : this(starName, "Unknown")
+    {
+      Console.WriteLine("Star type set to default: Unkown.");
+    }
+
+    public void Shine(){
+      Console.WriteLine($"Star {this.starName} is shining with brightness {this.brightness}.");
+    }
+
+    public void GrowOlder(){
+      this.age += 1000000000;
+      this.brightness -= this.brightness * 10/100;
+    }
+
+    public void Supernova(){
+      this.brightness = 0;
+      Console.WriteLine($"Star {this.starName} has exploded in a supernova.");
+    }
+  }
+
+}
