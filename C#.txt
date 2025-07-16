@@ -20,7 +20,7 @@ Loops - foreach (string note in melody){};
 Lists - List<string> listVar = using System.Collections.Generic ;new List<string>(); listVar.Add("");
 Lists methods - listVar.Count; listVar.Contains("string"); listVar.Remove("string"); listVar.Clear(); listVar.AddRange(new string[] {"s1","s2"}); listVar.InsertRange(2, new string[] {"s1","s2"});
 		listVar.RemoveRange(4,2); stringVar.ToCharArray();
-
+ddNPLKsE1em!
 Methods - static void methodName (string s, out int number); static void methodName (string s, string s1 = "here"); static void methodName(d: 4, b: 1; a: 2);
 
 Classes constructors - public Forest(string s) : this(s2, "Unknown")
@@ -29,3 +29,30 @@ Classes - static keyword makes the variable/method/property the same to all inst
 	- static constructors will run once without created an object or instantioning
 	- static methods can be accessed with creating an object or instantioning
 	- static classes cannot be instantioned similar to Math.Sqrt(); can be accessed at any time like a library
+	- static methods you don't need to create objects to call them just use the class name Vehicle.SpeedUp();
+Encapsulation - using public and private keywords
+		- public keyword means that everyone outside the class can access it
+		- private keyword means that can only be accessed inside the class or by modifying the property
+		- 
+
+Inheritance - using the colon syntax ":" a class can inherit from another class, which that class is also called base class/blueprint
+		- the protected keyword can be accessed by the current class and any classes that inherits from it
+		- using the keyword : base(parameter) will call the base class constructor, also every time a subclass object is created the base class constructor is called
+
+Polymorphism -> it means something that changes
+		- the virtual keyword, it means that the method can be overriden by it's inheritor
+		- the override method, means that the inheritor can modify the superclass method how he wishes
+		- upcasting is making the dervied class equal to an instance that has the superclass type, the new instance will have access to derived class overriden methods and it's own superclass non-virtual methods
+		ex.: Dog myDog = new Dog();
+		     Animal myAnimal = myDog;
+
+		- dowcasting is done by upcasting the derived class then with the new upcast instance you then downcast it again to the derived one, after this is done the new instance will have access to both superclass and derived class methods
+		e.x: Dog myDog = new Dog(); - create a dog
+		     Animal myAnimal = myDog; - upcast the dog to animal
+		     Dog myNewDog = (Dog)myAnimal; - downcast the upcasted dog back to dog
+
+		- using the "is"/"as" keyword will return true or false if an object can be upcast or downcast
+		- using the abstract keyword:
+			- a class cannot be instantied
+			- a method needs to overriden in a derived class
+			- a method needs to have that method mandatory!!
