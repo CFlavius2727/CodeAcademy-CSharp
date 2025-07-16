@@ -1,1 +1,1 @@
-All of these are projects from CodeAcademy for rewiew and understanding.
+CodeAcademy module "Learn C#".
